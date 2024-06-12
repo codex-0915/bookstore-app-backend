@@ -52,11 +52,11 @@ app.get("/books", (req, res) => {
 // example: localhost:3000/books
 /*
   body: {
-        "image":"https://your-image-url.com/image.png",
-        "name":"Magazine",
-        "price": 23.5,
-        "rating": 4
-    }
+    "image":"https://your-image-url.com/image.png",
+    "name":"Magazine",
+    "price": 23.5,
+    "rating": 4
+  }
 */
 app.post("/books", (req, res) => {
   const { image, name, price, rating } = req.body;
@@ -98,13 +98,13 @@ app.post("/books", (req, res) => {
 });
 
 // PUT route - Allows to update an item
-// example: localhost:3000/clothes/1
+// example: localhost:3000/books/1
 /*
   body: {
     "image": "https://your-image-url.com/image.png",
-    "name": "T-shirt",
-    "price": "10",
-    "rating": 4
+    "name": "Magazine",
+      "price": 23.5,
+      "rating": 4
   }
 */
 app.put("/books/:id", (req, res) => {
@@ -148,7 +148,7 @@ app.put("/books/:id", (req, res) => {
 });
 
 // DELETE route - Allows to delete an item
-// example: localhost:3000/clothes/1
+// example: localhost:3000/books/1
 app.delete("/books/:id", (req, res) => {
   const id = parseInt(req.params.id);
 
